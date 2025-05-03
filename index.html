@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=a.0" />
+        <title>Login Kelas</title>
+        <style>
+            body {
+   font-family: Arial, sans-serif;
+   background-image: url('https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msOOU?w=0&h=0&q=60&m=6&f=jpg&u=t');
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  .form-group {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(8, 8, 8);
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+        </style>
+    </head>
+    <body>
+        <div class="Login-container">
+            <h2>Login Kelas Berto Malus</h2>
+            <form onsubmit="return login(event)">
+                <div class="form-group">
+                    <label for="username">Nama Pengguna</label>
+                    <input type="text" id="username" required />
+                </div>
+                <div class="form-group">
+                    <label for="password">Kata sandi</label>
+                    <input type="password" id="password" required />
+                </div>
+                <button type="submit">Masuk</button>
+            </form>
+        </div>
+        <script src="script.js"></script>
+        <script>
+            const button = document.querySelector("button");
+            button.addEventListener("click", function () {
+              button.classList.add("clicked");
+              setTimeout(() => button.classList.remove("clicked"), 300);
+            });
+          </script>
+    </body>
+</html>
